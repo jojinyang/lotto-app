@@ -74,7 +74,7 @@
                     <li>
                         <label for="userSecurity">인증번호</label>
                         <input type="text" id="userSecurity" maxlength="6" required>
-                        <a href="#" onclick="checkSecurity()">인증요청</a>
+                        <a href="#" class="text-center" id="clickSecurity" onclick="checkSecurity()">인증요청</a>
                         <script>
                             function checkSecurity(){
                                 alert("인증 서버 점검중!\n잠시후, 다시 시도해주세요.")
@@ -82,10 +82,10 @@
                         </script>
                     </li>
                     <li>
-                        <label for="userPw">인증번호</label>
-                        <input type="checkbox" id="userPw" checked>
-                        개인정보 수집 및 이용동의
-                        <a href="#" class="warn">[전체보기]</a>
+                        <label for="userPrivacy">인증번호</label>
+                        <input type="checkbox" id="userPrivacy" checked>
+                        개인정보수집 및 이용에 동의합니다.
+                        <a href="#" class="warn" onclick="alert('서버 점검시간입니다. 잠시 후 다시 시도하세요!')">[전체보기]</a>
                     </li>
                     <li>
                         <input type="submit" value="회원가입">
