@@ -20,3 +20,26 @@ function sideOpen(){
 function sideClose(){
     sidePan.classList.add("d-none")
 }
+
+const toggleLockBtn = document.querySelector("#blind")
+
+toggleLockBtn.addEventListener("click", handleClick)
+
+let btnStatus = "lock"
+
+function handleClick(e){
+    if(e.target.className == "lock"){
+        unlock("해제");
+    } else{
+        lock("잠금");
+    }
+}
+
+function unlock(){
+    toggleLockBtn.className = "unlock"
+    toggleLockBtn.textContent = message
+}
+function lock() {
+    toggleLockBtn.className = "lock"
+    toggleLockBtn.textContent = message
+}
