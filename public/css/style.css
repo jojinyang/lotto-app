@@ -238,12 +238,12 @@ section {
         display: table-row;
     }
     #lotto_num dt, #lotto_num dd {
-        display: table-cell
+        display: table-cell;
     }  
     #lotto_num dt{
         background: #e4e4e4;
         color: var(--base-text-white);
-        padding: 1rem 2rem
+        padding: 1rem 2rem;
     }
     #lotto_num dd{
         border-top: 1px solid #e4e4e4;
@@ -251,7 +251,29 @@ section {
         letter-spacing: 5px;
     }
 
-    
+    ul#lotto_num li{ /* 종속 선택자 */
+        display: flex;
+    }
+    ul#lotto_num li span{ /* 종속 선택자 */
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        box-sizing: border-box;
+    }
+    ul#lotto_num li > span:first-child {
+        text-align: center;
+        background: #E4E4E4;
+        color: var(--base-text-dark);
+        padding: 0 1.250rem;
+        flex: 1;
+    }
+    ul#lotto_num li > span:last-child {
+        border-top: 1px solid #E4E4E4;
+        border-bottom: 1px solid #E4E4E4;
+        letter-spacing: 5px;
+        text-indent: 20%;
+        flex: 9;
+    }
     #blind {
         height: 30px;
         color: var(--base-text-dark);
